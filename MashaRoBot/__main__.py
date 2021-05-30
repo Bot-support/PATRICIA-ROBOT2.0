@@ -90,8 +90,6 @@ buttons = [
         InlineKeyboardButton(text="🔥SUPPORT🔥", url="t.me/patricia_support"),
     ],[
         InlineKeyboardButton(text="🔥UPDATE🔥", url="t.me/patricia_updates"),
-    ],[
-        InlineKeyboardButton(text="🌎OWNER WORLD🌎",url=t.me/t.me/frndsXworld"),
     ],
      [
         InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
