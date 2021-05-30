@@ -1,21 +1,28 @@
-## TIANA 2.0
-THIS IS GROUP MANAGER BOT.
-# DEPLOYMENT
-### CLICK BELOW IMAGE TO DEPLOY
-[![Deploy](https://telegra.ph/file/bcd7b3dec21d1c2b2583a.png)](https://heroku.com/deploy?template=https://github.com/prince301102/tiana-2.0.git)
+<h1 align="centre"> 𝐏𝐀𝐓𝐑𝐈𝐂𝐈𝐀 𝐑𝐎𝐁𝐎𝐓  </h1>
+<p align="center"><a href="https://t.me/patricia_support"><img src="https://telegra.ph/file/de8e07908f887c55d6993.jpg" width="7000"></a></p> 
+<h4 align="center">A Powerful, Smart And Simple Management Bot to safeguard your group from spammers.</h4>
 
-## DEPLOY HERE 
+ AVAILABLE ON TELEGRAM WITH NAME [PATRICIA](https://t.me/patricia_Robot)
+## 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 🚑
+<a href="https://t.me/patricia_updates"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 
-The easiest way to deploy this Bot
+<a href="https://t.me/patricia_support"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/prince301102/Tiana-2.0"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+### <b> JOIN SUPPORT GROUP FOR ANY QUERY AND HELP</b>
 
-Credits - [PRINCE](https://t.me/Prince_3011)
 
-### TELEGRAM
-Check me on [TELEGRAM](https://t.me/tiana_prince_bot)
 
-<details>
-<summary> CREDITS </summary>
-@PRINCE_3011
-</details>
+
+
+### 𝐃𝐄𝐏𝐋𝐎𝐘 👇👇 💻
+
+[![Deploy]( https://telegra.ph/file/fbee91847ade16a9ffe4d.png)](https://heroku.com/deploy?template=https://github.com/Bot-support/Patricia_Robot3.0)
+
+
+## 𝐂𝐑𝐄𝐃𝐈𝐓 💞
+
+<i><b> [BLAZE](https://t.me/piroXpower)</i></b>
+
+<i><b> [DAISY](https://github.com/TeamDaisyX/DaisyX)</i></b>
+
+
