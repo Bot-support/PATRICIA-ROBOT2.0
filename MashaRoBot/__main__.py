@@ -463,7 +463,9 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
             ),
-        )else:
+        )
+
+    else:
         send_help(chat.id, HELP_STRINGS)
 
 
