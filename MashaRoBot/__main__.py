@@ -72,8 +72,6 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-
-
 PM_START_TEXT = """
 Hello there, I'm [PATRICIA](https://telegra.ph/file/443a0e87e701d9f2f9451.jpg)
 
@@ -100,7 +98,6 @@ buttons = [
         ),
     ],
 ]
-
 
 HELP_STRINGS = f"""
 *Main Commands :* [🤖](https://telegra.ph/file/443a0e87e701d9f2f9451.jpg)
@@ -141,7 +138,9 @@ for module_name in ALL_MODULES:
         raise Exception("Can't have two modules with the same name! Please change one")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
-        HELPABLE[imported_module.__mod_name__.lower()] = imported_module# Chats to migrate on chat_migrated events
+        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
+
+    # Chats to migrate on chat_migrated events
     if hasattr(imported_module, "__migrate__"):
         MIGRATEABLE.append(imported_module)
 
@@ -180,7 +179,7 @@ def send_help(chat_id, text, keyboard=None):
 @run_async
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
-    # update.effective_message.reply_text("Hola tester! _I_ *have* markdown", parse_mode=ParseMode.MARKDOWN)
+    # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
@@ -243,7 +242,9 @@ def error_handler(update, context):
     tb_list = traceback.format_exception(
         None, context.error, context.error.__traceback__
     )
-    tb = "".join(tb_list)# Build the message with some markup and additional information about what happened.
+    tb = "".join(tb_list)
+
+    # Build the message with some markup and additional information about what happened.
     message = (
         "An exception was raised while handling an update\n"
         "<pre>update = {}</pre>\n\n"
@@ -359,11 +360,12 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by patricia_support.* "f"\n\n 🔥 Join [SUPPORT](https://t.me/Patricia_support) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
+            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by @PATRICIA_SUPPORT.* "
+            f"\n\n 🔥 Join [SUPPORT](https://t.me/Patricia_support) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the Global banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/443a0e87e701d9f2f9451.jpg)"
             f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
-            parse_mode=ParseMode.MARKDOWN,
+                        parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -388,8 +390,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *Patricia Robot*
-                 \nHere is the [SUPPORT](https://t.me/patricia_support) .""",
+            text=""" Hi..🤗 I'm *Patricia_Robot*
+                 \nHere is the [SUPPORT](t.me/piroXpower).""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -568,7 +570,9 @@ def settings_button(update: Update, context: CallbackContext):
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
                     )
                 ),
-            )elif back_match:
+            )
+
+        elif back_match:
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
@@ -634,7 +638,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1636265388 and DONATION_LINK:
+        if OWNER_ID != 1663464481 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -680,7 +684,8 @@ def migrate_chats(update: Update, context: CallbackContext):
 
 def main():
 
-    if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):try:
+    if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
+        try:
             dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Me the sage of the six paths is back to serve you.✨")
         except Unauthorized:
             LOGGER.warning(
@@ -738,7 +743,7 @@ def main():
     updater.idle()
 
 
-if name == "__main__":
+if __name__ == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
