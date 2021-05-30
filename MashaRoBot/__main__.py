@@ -74,47 +74,53 @@ def get_readable_time(seconds: int) -> str:
 
 
 
-PM_START_TEXT = """Hello, My name is ༒ 𝙏𝙄𝘼𝙉𝘼 ༒
+PM_START_TEXT = """
+Hello there, I'm [PATRICIA](https://telegra.ph/file/443a0e87e701d9f2f9451.jpg)
 
-Hey , I am a Group Manager,
-Made specially for Managing Groups.
+I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
 
-This Pro bot was made by [ℙℝ𝕀ℕℂ𝔼](https://t.me/prince_3011)
-Click /help or use button below to find out more about how to use me to my full potential."""
+✪ Make sure you read *INFO* Section Below ✪ 
+"""
 
 buttons = [
     [
-        InlineKeyboardButton(
-            text="➕️ ADD ༒ 𝙏𝙄𝘼𝙉𝘼 ༒ TO YOUR GROUP ➕️", url="t.me/Tiana_Prince_bot?startgroup=true"),
+        InlineKeyboardButton(text="🚀 INFO 🚀", url="https://telegra.ph/BLAZE-05-30-9"),
+    ],
+     [
+        InlineKeyboardButton(text="🔥SUPPORT🔥", url="t.me/patricia_support"),
+    ],[
+        InlineKeyboardButton(text="🔥UPDATE🔥", url="t.me/patricia_updates"),
+    ],[
+        InlineKeyboardButton(text="🌎OWNER WORLD🌎",url=t.me/t.me/frndsXworld"),
+    ],
+     [
+        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="📱ABOUT", callback_data="masha_"),
-        InlineKeyboardButton(text="⚜️HELP", callback_data="help_back"),
-    ],
-    [
         InlineKeyboardButton(
-            text="✨MY BF✨", url="http://t.me/prince_3011"),
-        InlineKeyboardButton(
-            text="⚜️CHANNEL⚜️", url="https://t.me/PRINCEBOTS"),
+            text="💫 Add Patricia to your group 💫", url="t.me/Patricia_Robot?startgroup=true"
+        ),
     ],
-    [  
-        InlineKeyboardButton(text="👥SUPPORT GROUP👥", url="https://t.me/PRINCEBOTSUPPORT"),
-    ], 
-    
 ]
 
-HELP_STRINGS = """
-༒ 𝙏𝙄𝘼𝙉𝘼 ༒ WITH NEW FEATURES 
 
-꧁*CHECK ALL BUTTON BELOW TO EXPLORE EVERY COMMANDS OF TIANA*꧂
+HELP_STRINGS = f"""
+*Main Commands :* [🤖](https://telegra.ph/file/443a0e87e701d9f2f9451.jpg)
+✪ /start: Starts me! You've probably already used this.
+✪ /help: Click this, I'll let you know about myself!
+✪ /donate: You can support my creater using this command.
+✪ /settings: 
+   ◔ in PM: will send you your settings for all supported modules.
+   ◔ in a Group: will redirect you to pm, with all that chat's settings.
+""".format(
+    dispatcher.bot.first_name,
+    "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
+)
 
-𖣘 *All commands can either be used with* `/` *or* `!`.
 
-𖣘 *If you facing any issue or find any bugs in any command then you can report it in @PRINCEBOTSUPPORT* [.](https://telegra.ph/file/1ab87614d722fd1b68caa.jpg)
-"""
-
-
-DONATE_STRING ="""CONTACT ME ON @PRINCE_3011"""
+DONATE_STRING = """Heya, glad to hear you want to donate!
+You can donate to the original writer's of the Base code,
+Support them [BLAZE](t.me/piroXpower),"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -137,9 +143,7 @@ for module_name in ALL_MODULES:
         raise Exception("Can't have two modules with the same name! Please change one")
 
     if hasattr(imported_module, "__help__") and imported_module.__help__:
-        HELPABLE[imported_module.__mod_name__.lower()] = imported_module
-
-    # Chats to migrate on chat_migrated events
+        HELPABLE[imported_module.__mod_name__.lower()] = imported_module# Chats to migrate on chat_migrated events
     if hasattr(imported_module, "__migrate__"):
         MIGRATEABLE.append(imported_module)
 
@@ -178,7 +182,7 @@ def send_help(chat_id, text, keyboard=None):
 @run_async
 def test(update: Update, context: CallbackContext):
     # pprint(eval(str(update)))
-    # update.effective_message.reply_text("Hola tester! _I_ *have* `markdown`", parse_mode=ParseMode.MARKDOWN)
+    # update.effective_message.reply_text("Hola tester! _I_ *have* markdown", parse_mode=ParseMode.MARKDOWN)
     update.effective_message.reply_text("This person edited a message")
     print(update.effective_message)
 
@@ -241,9 +245,7 @@ def error_handler(update, context):
     tb_list = traceback.format_exception(
         None, context.error, context.error.__traceback__
     )
-    tb = "".join(tb_list)
-
-    # Build the message with some markup and additional information about what happened.
+    tb = "".join(tb_list)# Build the message with some markup and additional information about what happened.
     message = (
         "An exception was raised while handling an update\n"
         "<pre>update = {}</pre>\n\n"
@@ -303,7 +305,7 @@ def help_button(update, context):
         if mod_match:
             module = mod_match.group(1)
             text = (
-                "「 *HELP FOR* *{}* 」:\n".format(
+                "*⚊❮❮❮❮ ｢  Help  for  {} Patricia module 」❯❯❯❯⚊*\n".format(
                     HELPABLE[module].__mod_name__
                 )
                 + HELPABLE[module].__help__
@@ -359,16 +361,10 @@ def Masha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "masha_":
         query.message.edit_text(
-            text=""" ℹ️ I'm *TIANA*, a powerful group management bot built to help you manage your group easily.
-                 ❍ I can restrict users.
-                 ❍ I can greet users with customizable welcome messages and even set a group's rules.
-                 ❍ I have an advanced anti-flood system.
-                 ❍ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc.
-                 ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
-                 ❍ I check for admins' permissions before executing any command and more stuffs
-                 \n_Masha's licensed under the GNU General Public License v3.0_
-                 Here is the [💾Repository](https://github.com/prince301102/tiana-2.0).
-                 If you have any question about masha, let us know at @princebotsupport.""",
+            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by patricia_support.* "f"\n\n 🔥 Join [SUPPORT](https://t.me/Patricia_support) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
+            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the Global banning system which safegaurds and helps your group from spammers."
+            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/443a0e87e701d9f2f9451.jpg)"
+            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -394,8 +390,8 @@ def Source_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..🤗 I'm *TIANA BOT*
-                 \nHere is the [Source Code](https://GitHub.com/prince301102/tiana-2.0) .""",
+            text=""" Hi..🤗 I'm *Patricia Robot*
+                 \nHere is the [SUPPORT](https://t.me/patricia_support) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=False,
             reply_markup=InlineKeyboardMarkup(
@@ -469,9 +465,7 @@ def get_help(update: Update, context: CallbackContext):
             InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
             ),
-        )
-
-    else:
+        )else:
         send_help(chat.id, HELP_STRINGS)
 
 
@@ -574,9 +568,7 @@ def settings_button(update: Update, context: CallbackContext):
                         next_page + 1, CHAT_SETTINGS, "stngs", chat=chat_id
                     )
                 ),
-            )
-
-        elif back_match:
+            )elif back_match:
             chat_id = back_match.group(1)
             chat = bot.get_chat(chat_id)
             query.message.reply_text(
@@ -642,7 +634,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1663464481 and DONATION_LINK:
+        if OWNER_ID != 1636265388 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -688,8 +680,7 @@ def migrate_chats(update: Update, context: CallbackContext):
 
 def main():
 
-    if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
-        try:
+    if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):try:
             dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "Me the sage of the six paths is back to serve you.✨")
         except Unauthorized:
             LOGGER.warning(
@@ -747,7 +738,7 @@ def main():
     updater.idle()
 
 
-if __name__ == "__main__":
+if name == "__main__":
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     telethn.start(bot_token=TOKEN)
     pbot.start()
