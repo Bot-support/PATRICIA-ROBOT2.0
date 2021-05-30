@@ -16,7 +16,7 @@
 
 ### 𝐃𝐄𝐏𝐋𝐎𝐘 👇👇 💻
 
-[![Deploy]( https://telegra.ph/file/fbee91847ade16a9ffe4d.png)](https://heroku.com/deploy?template=https://github.com/Bot-support/Patricia_Robot3.0)
+[![Deploy]( https://telegra.ph/file/fbee91847ade16a9ffe4d.png)](https://heroku.com/deploy?template=https://github.com/Bot-support/PATRICIA-ROBOT3.0)
 
 
 ## 𝐂𝐑𝐄𝐃𝐈𝐓 💞
