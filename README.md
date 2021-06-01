@@ -8,9 +8,9 @@
 
 AVAILABLE ON TELEGRAM WITH NAME [PATRICIA](https://t.me/patricia_Robot) 
          
-<h1 align="centre"> ⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️ </h1>
 
-## 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 🚑
+
+## ⚔️ 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 🚑 ⚔️
 <a href="https://t.me/patricia_updates"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
 
 <a href="https://t.me/patricia_support"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
