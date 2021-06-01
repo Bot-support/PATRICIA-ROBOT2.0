@@ -7,7 +7,7 @@
 ## OFFICIAL BOT
 
 AVAILABLE ON TELEGRAM WITH NAME [PATRICIA](https://t.me/patricia_Robot) 
-⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️
+       ⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️⚔️
 
 ## 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 🚑
 <a href="https://t.me/patricia_updates"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
